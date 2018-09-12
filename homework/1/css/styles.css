@@ -1,0 +1,156 @@
+body {
+    background-color: #17252a;
+    margin: 0px;
+    padding: 0px;
+    font-family:helvetica;
+    text-align:center;
+    color: white;
+}
+
+header {
+    position: relative;
+    text-shadow: .05em .05em 0 #2b7a78;
+    display:inline-block;
+    margin-top: 15px;
+    /*background-image: linear-gradient(to bottom right, #3aafa9, #2b7a78);*/
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 56px;
+    color: #def2f1;
+    letter-spacing: 1.5px;
+  
+}
+
+.question {
+    padding-top:20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align:left;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3aafa9;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    clear:left;
+}
+
+
+
+.answer {
+    text-align: left;
+    display: inline-block;
+    float: left;
+    background-color:#3aafa9;
+    padding: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px 3px #2b7a78;
+}
+
+.outer {
+    text-align:center;
+}
+
+.imgblock {
+    margin-top: 50px;
+    display: inline-block;
+    vertical-align: top;
+    text-align:center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.imgblock img:hover {
+    background-color:#17252a;
+    opacity: .25;
+}
+
+
+#clickprompt {
+    display: inline-block;
+    text-align: center;
+    background-color:#3aafa9;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 1px #2b7a78;
+}
+
+.navi {
+
+    display: inline-block;
+    border-radius: 5px;
+    text-align:center;
+    background-color:#3aafa9;
+    font-weight: bold;
+    box-shadow: 3px 3px 0px 1px #2b7a78;
+    text-decoration: none;
+    padding: 15px;
+    margin-top:10px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 100px;
+    color:white;
+}
+
+#index {
+    width: 150px;
+}
+
+.navi:hover {
+    opacity: .75;
+}
+
+.navi a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 15px;
+        color:white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav ul {
+    margin-left: -20px;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.outerimg {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 14%;
+}
+
+#list {
+    padding-left: 30px;
+}
+
+footer {
+    padding-top: 50px;
+    clear: left;
+}
+
+#link {
+    text-decoration:none;
+    color:blue;
+}
