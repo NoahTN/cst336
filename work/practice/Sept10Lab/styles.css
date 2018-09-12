@@ -1,0 +1,51 @@
+body {
+    font-family: Calibri;
+}
+
+nav {
+    background-color:#000080;
+    color: white;
+    font-size: 42px;
+    padding: 15px;
+}
+
+#intro {
+    text-align: center;
+    font-size: 24px;
+}
+
+.img-with-text {
+    margin: 12px;
+    float: left;
+    text-align: justify;
+    width: 263px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+.img-with-text div {
+    display:inline-block;
+}
+
+footer {
+    clear: left;
+}
+
+#degPro {
+    font-size: 24px;
+    color: #000080;
+}
+
+#minProg {
+    color: #000080;
+}
+
+#b {
+    margin-left: 25px;
+}
+
+#b nav {
+    margin-left: -25px;
+}
