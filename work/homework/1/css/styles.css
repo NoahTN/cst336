@@ -48,8 +48,6 @@ header {
     float: left;
     background-color:#3aafa9;
     padding: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 30px;
@@ -157,11 +155,16 @@ footer {
     clear: left;
 }
 
-#link {
+.link {
     text-decoration:none;
     color:blue;
 }
 
 hr {
     width: 60%;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
