@@ -71,6 +71,11 @@ header {
     opacity: .25;
 }
 
+.imgblock a img{
+    width: 70%;
+    height: 70%;
+}
+
 
 #clickprompt {
     display: inline-block;
@@ -153,4 +158,8 @@ footer {
 #link {
     text-decoration:none;
     color:blue;
+}
+
+hr {
+    width: 60%;
 }
