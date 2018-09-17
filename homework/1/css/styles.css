@@ -45,7 +45,6 @@ header {
 .answer {
     text-align: left;
     display: inline-block;
-    float: left;
     background-color:#3aafa9;
     padding: 15px;
     margin-left: 150px;
@@ -147,7 +146,7 @@ header {
 }
 
 #list {
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 footer {
