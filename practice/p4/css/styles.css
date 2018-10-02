@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+.king {
+    background-color: cyan;
+}
+
+.ace {
+    background-color: yellow;
+}
+
+table {
+    display: inline-block;
+    text-align: center;
+}
