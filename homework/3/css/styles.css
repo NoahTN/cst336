@@ -1,0 +1,86 @@
+body {
+   
+    text-align: center;
+    font-family: helvetica;
+}
+
+header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-color: black;
+    border-style: solid;
+    text-align: left;
+}
+
+
+select {
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
+}
+
+#name{
+    margin-bottom: 20px;
+}
+
+form {
+     vertical-align: top;
+    display:inline-block;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #4ABDAC;
+
+}
+
+.flyer {
+    vertical-align: top;
+    display: inline-block;
+    width: 250px;
+    height: 700px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+img {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+p {
+    font-style: italic;
+    font-size: 24px;
+}
+
+.grayscale {
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    background-color: #DCDCDC;
+}
