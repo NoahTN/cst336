@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Generated Flyer</title>
+        <title>Bookmark Generator</title>
         <style>
             @import url("css/styles.css");
         </style>
