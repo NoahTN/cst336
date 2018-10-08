@@ -1,5 +1,5 @@
 body {
-   
+    background-image: url("../img/kale-salad.jpg");
     text-align: center;
     font-family: helvetica;
 }
@@ -7,7 +7,9 @@ body {
 header {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 fieldset {
@@ -32,7 +34,8 @@ textarea {
 }
 
 form {
-     vertical-align: top;
+    border: 0.5px black solid;
+    vertical-align: top;
     display:inline-block;
     padding: 30px;
     border-radius: 10px;
@@ -48,6 +51,7 @@ form {
     margin-top: 5px;
     margin-bottom: 30px;
     border-radius: 10px;
+    border: 0.2px solid black;
 }
 
 .blue {
