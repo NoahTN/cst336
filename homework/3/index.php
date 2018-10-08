@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flyer Generator</title>
+        <title>Bookmark Generator</title>
         <style>
             @import url("css/styles.css");
         </style>
     </head>
     
     <body>
-        <header> Flyer Generator</header>
+        <header>Bookmark Generator</header>
+         
         <form action="save.php" method="POST">
             <label for="name">Name:</label>
-            <input type="text" name="name" id = "name" placeholder="Enter name here"/><br>
+            <input type="text" name="name" id = "name" placeholder="Enter name here" required><br>
             <br>
-            
             <label for="address">Make a statement:</label><br>
-            <textarea id="address" name="addresstext"></textarea><br>
+            <textarea id="address" name="addresstext" required></textarea><br>
             <br>
-            
             <label for="picselect">Select an avatar:</label><br>
             <select id="picselect" name="picture">
-                <option>Dog</option>
-                <option>Cat</option>
-                <option>Frog</option>
-                <option>Otter</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="frog">Frog</option>
+                <option value="Otter">Otter</option>
             </select>
             <br>
-            
             <fieldset class = "bgbox">
                 <legend>Pick a background color</legend>
                 <input class="rad" type="radio" name ="bgcolor" value="blue" id="blue" checked="checked">

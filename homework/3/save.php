@@ -21,7 +21,6 @@
                     echo "<img src='img/snoop.gif' alt='Snoop Dogg' height= 150px style='border: none'/>";
             ?>
         </div>
-       
         
         <form action="save.php" method="POST" style="margin-top: 50px; margin-left: 50px">
             <label for="name">Name:</label>
