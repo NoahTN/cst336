@@ -25,11 +25,11 @@
         
         <form action="save.php" method="POST" style="margin-top: 50px; margin-left: 50px">
             <label for="name">Name:</label>
-            <input type="text" name="name" id = "name" placeholder="Enter name here" value=<?=$_POST['name']?> ><br>
+            <input type="text" name="name" id = "name" placeholder="Enter name here" value="<?=$_POST['name']?>" required><br>
             <br>
             
             <label for="address">Make a statement:</label><br>
-            <textarea id="address" name="addresstext"><?=$_POST["addresstext"]?></textarea><br>
+            <textarea id="address" name="addresstext" required><?=$_POST["addresstext"]?></textarea><br>
             <br>
             
             <label for="picselect">Select an avatar:</label><br>
