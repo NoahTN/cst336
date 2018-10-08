@@ -33,7 +33,7 @@
             
             <label for="picselect">Select an avatar:</label><br>
             <select id="picselect" name="picture">
-                <option <?= ($_POST['picture'] == "Dog" ? "selected='selected'" : "")?> >Dog</option>
+                <option <?= ($_POST['picture'] == "Dog" ? "selected='selected'" : "")?>>Dog</option>
                 <option <?= ($_POST['picture'] == "Cat" ? "selected='selected'" : "")?>>Cat</option>
                 <option <?= ($_POST['picture'] == "Frog" ? "selected='selected'" : "")?>>Frog</option>
                 <option <?= ($_POST['picture'] == "Otter" ? "selected='selected'" : "")?>>Otter</option>

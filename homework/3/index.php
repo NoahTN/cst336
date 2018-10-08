@@ -19,10 +19,10 @@
             <br>
             <label for="picselect">Select an avatar:</label><br>
             <select id="picselect" name="picture">
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="frog">Frog</option>
-                <option value="Otter">Otter</option>
+                <option>Dog</option>
+                <option>Cat</option>
+                <option>Frog</option>
+                <option>Otter</option>
             </select>
             <br>
             <fieldset class = "bgbox">
