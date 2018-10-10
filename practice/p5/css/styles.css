@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+.body {
+    display: inline-block;
+    background-color: pink;
+    padding: 20px;
+    width: 700px;
+    border-radius: 10px;
+}
+
+.pass {
+    font-size: 18px;
+}
+
+header {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
