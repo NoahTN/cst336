@@ -78,29 +78,7 @@
   <head>
     <title>A Meme</title>
     <style>
-      #meme-div{
-      width: 450px;
-      height: 450px;
-      background-size: 100%;
-      text-align: center;
-      position: relative;
-      }
-      h2 {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 15px 0;
-        padding: 0 5px;
-        font-family: impact;
-        color: white;
-        text-shadow: 1px 1px black;
-      }
-      #line1 {
-         top: 0;
-       }
-      #line2 {
-         bottom: 0;
-       }
+      @import "css/styles.css";
     </style>
   </head>
   <body>
