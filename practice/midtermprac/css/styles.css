@@ -1,0 +1,27 @@
+body {
+    font-family: helvetica;
+    text-align: center;
+}
+
+table {
+    display:inline-block;
+    border-collapse: collapse;
+
+}
+
+td {
+    height: 150px;
+    width: 175px;
+}
+
+header {
+    display:inline-block;
+    background-color: silver;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+

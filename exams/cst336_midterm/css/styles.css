@@ -1,0 +1,13 @@
+body {
+    background-color: silver;
+}
+
+p {
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+}
+
+li {
+    color: red;
+}
