@@ -11,7 +11,7 @@
   <head>
     <title>Welcome</title>
     <style>
-      
+      @import "css/styles.css";
     </style>
   </head>
   <body>
