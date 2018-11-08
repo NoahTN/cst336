@@ -36,3 +36,36 @@
 .line2 {
  bottom: 0;
 }
+
+nav ul {
+    float: right;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.error {
+    color: red; 
+    padding: 10px 10px 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0 0 20px;
+}
+
+nav a {
+    text-decoration: none; 
+}
+
+.edit-menu {
+ position: absolute;
+ bottom: -22px;
+}
