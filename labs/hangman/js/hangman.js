@@ -28,4 +28,3 @@ function pickWord() {
     var randomInt = Math.floor(Math.random() * words.length);
     selectedWord = words[randomInt];
 }
-
