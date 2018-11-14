@@ -13,7 +13,7 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 
 window.onload = startGame();
 
-$(".letter").click(function() {
+$(document).on("click", ".letter", function() {
     checkLetter($(this).attr("id"));
     disableButton($(this));
 });
@@ -22,11 +22,11 @@ $(".replayBtn").on("click", function() {
     location.reload();
 })
 
-$("#hintBtn").on("click", function() {
+$(document).on("click","#hintBtn", function() {
     $(this).hide();
     $(".hint").show();
     showHint = true;
-    remainingGuesses--;
+    remainingGuesses-=1;
     updateMan();
 })
   
@@ -54,9 +54,10 @@ function updateBoard() {
     $("#word").append("<br>");
    
     $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+
     if(!showHint) {
         $(".hint").hide();
-        $("#word").append("<button id='hintBtn' >Get Hint</button>");
+        $("#word").append("<button id='hintBtn'>Get Hint</button>");
     }
 }
 
@@ -92,10 +93,7 @@ function checkLetter(letter) {
         remainingGuesses -=1;
         updateMan();
     }
-    
-    if(remainingGuesses <= 0) {
-        endGame(false);
-    }
+  
 }
 
 function updateWord(positions, letter) {
@@ -112,6 +110,11 @@ function disableButton(btn) {
 
 function updateMan() {
     $("#hangImg").attr("src", "img/stick_" + (6-remainingGuesses) + ".png");
+    if(remainingGuesses <= 0) {
+        $(".hint").hide();
+        $("#hintBtn").hide();
+        endGame(false);
+    }
 }
 
 function endGame(win) {
