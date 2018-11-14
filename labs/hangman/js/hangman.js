@@ -111,14 +111,14 @@ function disableButton(btn) {
 function updateMan() {
     $("#hangImg").attr("src", "img/stick_" + (6-remainingGuesses) + ".png");
     if(remainingGuesses <= 0) {
-        $(".hint").hide();
-        $("#hintBtn").hide();
         endGame(false);
     }
 }
 
 function endGame(win) {
     $("#letters").hide();
+    $(".hint").hide();
+    $("#hintBtn").hide();
     if(win) {
         $('#won').show();
         
