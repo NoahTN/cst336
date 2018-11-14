@@ -17,6 +17,7 @@
             guessField.focus();
             resetButton.style.display = 'none';
             
+
             function checkGuess() {
                 var userGuess = Number(guessField.value);
                 if (guessCount === 1 ) {
