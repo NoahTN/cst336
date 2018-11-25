@@ -1,0 +1,81 @@
+body {
+    text-align: center;
+    font-family: helvetica, sans-serif;
+    background-image: url("../img/bg.png");
+}
+
+form {
+    background-image: none;
+    background-color: white;
+    display: inline-block;
+    box-shadow: 2px 3px grey;
+    border: solid black 2px;
+    border-radius: 6px;
+    padding: 100px 300px 50px 300px;
+    font-size: 20px; 
+}
+
+#usernameValidation {
+    font-size: 24px;
+    position: absolute;
+    left: 270px;
+    bottom: 0px;
+    width: 300px;
+    text-align: left;
+    
+}
+
+h3 {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+
+select {
+    text-align: left;
+    display: block;
+    width: 255px;
+    font-size: 20px;
+   
+}
+
+input {
+   font-size: 20px;
+}
+
+#user {
+    position: relative;
+    margin-top: -90px;
+}
+
+#zip {
+    position: relative;
+}
+
+#zipcodeText {
+    font-size: 24px;
+    position: absolute;
+    left: 270px;
+    width: 300px;
+    text-align: left;
+}
+
+#pass {
+    position: relative;
+}
+
+#passwordValidation {
+    font-size: 24px;
+    position: absolute;
+    bottom: -10px;
+    left: 270px;
+    width: 300px;
+    text-align: left;
+}
+
+button {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px;
+}

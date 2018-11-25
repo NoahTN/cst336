@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            @import url("css/styles.css");
+        </style>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+            <script>
+            $(document).ready(function(){
+                     
+                     
+                function setUsernameText(data) {
+                       if (data == "Available") {
+                            $("#usernameValidation").html("Available!"); 
+                            $("#usernameValidation").css("color","green");
+                        }
+                        else if(data == "Unavailable"){
+                            $("#usernameValidation").html("Username already taken!");         
+                            $("#usernameValidation").css("color","red");
+                        }
+                        else if(data == "none"){
+                            $("#usernameValidation").html("Enter a username!");
+                        }
+                        else {
+                            $("#usernameValidation").html("");
+                            $("#usernameValidation").css("color","red");
+                        }
+                }    
+                     
+                function setZipCodeText(data) {
+                    if(data) {
+                        $("#zipcodeText").css("bottom", "-25px");
+                        $("#zipcodeText").css("color", "green");
+                        $("#zipcodeText").append("City: " + data[1] 
+                                                 + "<br> Latitude: " + data[5] + String.fromCharCode(176)
+                                                 + "<br> Longitude: " + data[6] + String.fromCharCode(176));
+                        }
+                    else {
+                        $("#zipcodeText").css("color", "red");
+                        $("#zipcodeText").css("bottom", "0px");
+                        $("#zipcodeText").html("Zip Code not found");
+                    }
+                }
+                
+                     
+                     
+                // Username Checker
+                $("#username").change( function(){
+                    $.ajax({
+                        type: "get",
+                        url: "usernameLookup.php",
+                        data: { "username": $(this).val()},
+                        success: function(data,status) {
+                            setUsernameText(data);
+                        }      
+                    });
+                });
+       
+                // Update County List
+                $("#state").change( function () { 
+                    $.ajax({
+                        type: "GET",
+                        url: "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php",
+                        dataType: "json",
+                  
+                        data: {
+                            "state": $("#state").val()
+                        },
+                        
+                        success: function(data,status) {
+                            $("#county").html("<option> Select One </option>");
+                            for (var i=0; i< data['counties'].length; i++){
+                                $("#county").append("<option>" + data["counties"][i].county + "</option>" );
+                            }
+                            
+                        }
+                     
+                   });
+                });
+                
+                //Update City and Coordinates based on zip
+                $("#zip").change( function () { 
+                    $.ajax({
+                        type: "GET",
+                        url: "https://www.showdeolabs.com/cors?url=http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php?zip=" + $("#zipcode").val(),
+                        dataType: "json",
+                  
+                        
+                        success: function(data,status) {
+                            $("#zipcodeText").html("");
+                            if($("#zipcode").val().match(/[^$,.\d]/))
+                                setZipCodeText(false);
+                            else {
+                                data = JSON.parse(data);
+                                console.log(data);
+                                setZipCodeText(data);   
+                            }
+                            
+                        }
+                        
+                 
+                   });
+                });
+                
+                //Password validation
+                $("#signup").on("click", function(e) {
+                    if($("#password").val() != $("#passwordVerif").val()) {
+                        $("#passwordValidation").html("Password not retyped correctly");
+                        e.preventDefault();
+                    }
+                    else {
+                        $("#passwordValidation").html("");
+                    }
+                    
+                    //If there is error text based on color
+                    if($("#usernameValidation").css("color")=="rgb(255, 0, 0)") {
+                        if($("#usernameValidation").is(':empty'))
+                            setUsernameText("none");
+                        e.preventDefault();
+                    }
+                     
+                    if($("#zipcodeText").css("color")=="rgb(255, 0, 0)") {
+                        setZipCodeText(false);
+                        e.preventDefault();
+            
+                    }
+                    
+                    return true;
+                });
+            });
+            
+         
+            
+            
+    </script>
+    </head>
+    
+        
+    <body>
+        <h1>Sign Up</h1>
+        <form>
+            <div id="user">
+            <h3>Username</h3>
+            <input type="text" id="username" /> 
+            <div style="color:red" id="usernameValidation"></div>
+            </div>
+            
+            <div id="pass">
+            <h3>Password</h3>
+            <input type="password" id="password" /> 
+            <h3>Retype Password</h3>
+            <input type="password" id="passwordVerif" /> 
+            <div style="color:red" id="passwordValidation"></div>
+            </div>
+            
+          
+            <h3>State</h3> 
+            <input type="text" id="state"/>
+            
+            <h3>County</h3> 
+            <select id="county">
+            <option>Select One</option>
+            </select>
+            
+            <div id="zip">
+                <h3>Zip Code</h3>
+                <input type="text" id="zipcode" />
+                <div style="color: red" id="zipcodeText"></div>
+            </div>
+            
+            <button id="signup">Sign Up</button>
+        </form>
+    </body>
+</html>
