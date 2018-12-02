@@ -1,0 +1,52 @@
+body {
+    text-align: center
+}
+
+.carouselIMG {
+    width: 640px;
+    height: 480px;
+}
+
+.animalDiv {
+    display: inline-block;
+    background-color: silver;
+    border-radius: 10px;
+    width: 600px;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.adoptButton{
+    margin-left: 475px;
+    
+}
+
+#mainText {
+    text-align: left;
+    margin-left: 225px;
+    margin-top: 25px;
+}
+
+#petIMG {
+    width: 200px;
+    height: 200px;
+    float:left;
+    border: 1px solid black;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+#loadingIMG {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    width: 200px;
+    height: 200px;
+}
