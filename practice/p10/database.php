@@ -1,5 +1,3 @@
-
-
 <?php
     // connect to our mysql database server
     
@@ -8,7 +6,7 @@
             $host = "localhost";
             $username = "noahtolentino";
             $password = "i am a Perfect 6";
-            $dbname = "memes_v2"; 
+            $dbname = "c9"; 
         }
         else {
             $host = "us-cdbr-iron-east-01.cleardb.net";
@@ -22,8 +20,5 @@
     
         return $dbConn; 
     }
-    
-
-   
 ?>
 
