@@ -1,0 +1,288 @@
+textarea {
+    resize: none;
+    width: 300px;
+    height: 200px;
+}
+
+#homePage {
+    display: none;
+}
+
+#slangPage {
+    display: none;
+}
+
+#contributePage {
+    display: none;
+}
+
+#signupPrompt {
+    display: none;
+}
+
+#signupDiv {
+    display: none;
+    font-weight: bold;
+    background-color: #e3e2df;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 210px 20px 210px;
+    font-weight: bold;
+}
+
+.contributeBox {
+    text-align: center;
+    display: inline-block;
+    background-color: #e3e2df;
+    border: 1px solid #c5c6c7;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+#loginDiv {
+    margin-top: 20px;
+    display: none;
+    background-color: #e3e2df;
+    border: 1px solid #c5c6c7;
+    border-radius: 5px;
+    padding: 10px 80px 20px 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#loginDiv input {
+    width: 100%;
+}
+
+
+
+.btn-success {
+    width: 100%;
+    background-color: #5cbc87;
+}
+
+#contributeButton {
+    margin-top: 1.5em;
+    width: 25%;
+}
+
+#createButton {
+    width: auto;
+}
+
+#contributeDialect {
+    margin-bottom: 20px;
+}
+
+#trySignupButton {
+    width: auto;
+}
+
+#loginErrorMessage {
+    display: none;
+    color: red;
+}
+
+#contributeTextSource {
+    margin-right: 10px;
+}
+
+
+#downArrow{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80px;
+    
+}
+
+a {
+    cursor: pointer;
+    color: blue;
+}
+
+#editButton {
+    margin-top: 1.5em;
+    max-width: 150px;
+    
+}
+
+#images {
+    display:inline-table;
+    
+}
+
+#rightArrow {
+    width: 100px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    display:table-cell;
+    
+}
+
+#swapArrows {
+ display:table-cell;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 100%;
+ vertical-align: top;
+ opacity: 0.2;
+}
+
+.arrowBorder {
+    display:inline;
+    color: #5cbc87;
+    font-weight: bold;
+}
+
+#selectDiv {
+    display:inline-block;
+    width: 46%;
+}
+
+#sourceLang {
+    position: relative;
+    left: 0px;
+}
+
+#leftSide {
+    display: inline-block;
+    text-align: left;
+
+  
+}
+
+#rightSide {
+    text-align: right;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 650px;
+}
+
+#usernameDiv {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#passwordDiv {
+    position: relative;
+    
+}
+
+#signupPassword {
+    margin-bottom: 20px;
+}
+
+#usernameErrorMessage {
+    display: none;
+   position: absolute;
+   left: 190px;
+   width: 200px;
+   color:red;
+}
+
+#passwordErrorMessage {
+    display: none;
+   position: absolute;
+   left: 190px;
+   width: 200px;
+   color:red;
+}
+
+#results {
+    display: none;
+}
+
+.nav-tabs { 
+    border-bottom: none;
+ }
+ 
+ 
+.nav-link {
+   font-size: 16px;
+   color: #5cbc87;
+ 
+}
+
+#displayUserContributions {
+    display: none;
+}
+
+#accordion {
+    display: none;
+}
+
+#aggData {
+    text-align: center;
+}
+
+#resultsMetadata {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-top: 2px solid #5cbc87;
+    border-bottom: 2px solid #5cbc87;
+}
+
+.slangNumber {
+    display:inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    color: #5cbc87;
+    font-style: italic;
+}
+
+.colorHeader {
+    background-color: #5cbc87; 
+    color: white;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #c5c6c7;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.slangData {
+    display: inline-block;
+    color: white;
+    background-color: #5cbc87;
+    padding: 5px;
+}
+
+.contributeItem {
+    margin-bottom: 15px;
+}
+
+
+/*Neccessary CSS to override css in the 4.0 bootstrap CSS which was breaking the modal*/
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+
