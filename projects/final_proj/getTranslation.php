@@ -1,12 +1,11 @@
 <?php
-# Includes the autoloader for libraries installed with composer
 require __DIR__ . '/composer/vendor/autoload.php';
-
-# Imports the Google Cloud client library
 use Google\Cloud\Translate\TranslateClient;
 include "db/database.php";
+
 $output = array();
 if(!empty($_GET["dialect"])) {
+	# select all entries containing the selected languages
     $sql = "SELECT
                 phrase1, 
                 phrase2,
@@ -29,44 +28,30 @@ if(!empty($_GET["dialect"])) {
     $statement = $dbConn->prepare($sql); 
     $statement->execute(); 
     $records = $statement->fetchAll();
-
 }
 
-// Get slang text is possible
+// check if slang text exists
 if(!empty($records[0])) {
-    // If message is part of column set one, get the contents of column set two
+    // if message is part of column set one, get the contents of column set two
     if($records[0]["phrase1"]==$_GET["message"] && $records[0]["lang1"] == $_GET["sourceLang"])
         $output["slangText"] = $records[0]["phrase2"];
-    // Else get the opposite
+    // else slang doesn't exist, get the opposite
     else
         $output["slangText"] = $records[0]["phrase1"];    
 }
 
-
-// Get Google Translate result if not same lang
+// get Google Translate result if not same language
 if($_GET["sourceLang"] != $_GET["targetLang"]) {
-    # Your Google Cloud Platform project ID
-    $projectId = 'my-project-1543956958092';
-    putenv('GOOGLE_APPLICATION_CREDENTIALS=./composer/vendor/google/cred/credentials.json');
-    # Instantiates a client
-    $translate = new TranslateClient([
-        'projectId' => $projectId
-    ]);
-        
-    # The text to translate
+    $projectId = getenv('PROJ_ID');
+    $translate = new TranslateClient(['projectId' => $projectId]);
+	
     $text = $_GET["message"];
-    # The source language
     $source = $_GET["sourceLang"];
-    # The target language
     $target = $_GET["targetLang"];
-        
-    # Translates the text
-    $output["convertedWord"] = $translate->translate($text, [
-        'source' => $source,
-        'target' => $target
-    ]);
+  
+    $output["convertedWord"] = $translate->translate($text, ['source' => $source, 'target' => $target]);
 }
-// Else output same text
+// else same language, output unchanged text
 else {
     $output["convertedWord"]["text"] = $_GET["message"];
 }
