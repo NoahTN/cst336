@@ -1,4 +1,4 @@
-<img src="https://github.com/NoahTolentinoNguyen/cst336/projects/final_proj/ing/logo.png"> 
+<img src="https://github.com/NoahTN/cst336/projects/final_proj/ing/logo.png"> 
 
 # About
 QuikSlang features a user-powered database ontop of the Google Translate API, allowing users to translate more obscure sayings across languages.
