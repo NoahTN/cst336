@@ -1,4 +1,4 @@
-<a src="https://cst336noahtn.herokuapp.com/projects/final_proj/index.php">
+<a href="https://cst336noahtn.herokuapp.com/projects/final_proj/index.php">
     <img src="https://github.com/NoahTN/cst336/blob/master/projects/final_proj/img/logo.png">
 </a> 
 
