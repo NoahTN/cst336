@@ -27,8 +27,8 @@ foreach ($records as $record) {
 
 
 # Your Google Cloud Platform project ID
-$projectId = env('PROJ_ID');
-putenv('GOOGLE_APPLICATION_CREDENTIALS='.json_decode(env('GOOGLE_CREDENTIALS'), true));
+$projectId = getenv('PROJ_ID');
+putenv('GOOGLE_APPLICATION_CREDENTIALS='.json_decode(getenv('GOOGLE_CREDENTIALS'), true));
 
 $translate = new TranslateClient();
 
