@@ -30,7 +30,7 @@ foreach ($records as $record) {
 
 # Your Google Cloud Platform project ID
 $projectId = getenv('PROJ_ID');
-$credentials = CredentialsLoader::makeCredentials($scope, json_decode(getenv('GOOGLE_CREDENTIALS'), true));
+$credentials = CredentialsLoader::makeCredentials($scope, json_decode(getenv('GOOGLE_API_KEY'), true));
 
 $translate = new TranslateClient();
 
