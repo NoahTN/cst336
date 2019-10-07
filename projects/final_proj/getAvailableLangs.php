@@ -4,6 +4,8 @@ require __DIR__ . '/composer/vendor/autoload.php';
 
 # Imports the Google Cloud client library
 use Google\Cloud\Translate\TranslateClient;
+use Google\Auth\CredentialsLoader;
+
 include "db/database.php";
 $output = array();
 
@@ -28,7 +30,7 @@ foreach ($records as $record) {
 
 # Your Google Cloud Platform project ID
 $projectId = getenv('PROJ_ID');
-putenv('GOOGLE_APPLICATION_CREDENTIALS='.getenv('GOOGLE_CREDENTIALS'));
+$credentials = CredentialsLoader::makeCredentials($scope, json_decode(getenv('GOOGLE_CREDENTIALS'), true));
 
 $translate = new TranslateClient();
 
