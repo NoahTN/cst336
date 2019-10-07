@@ -42,6 +42,7 @@ if(!empty($records[0])) {
 
 // get Google Translate result if not same language
 if($_GET["sourceLang"] != $_GET["targetLang"]) {
+    putenv('GOOGLE_APPLICATION_CREDENTIALS=./composer/vendor/google/cred/credentials.json');
     $projectId = getenv('PROJ_ID');
     $translate = new TranslateClient(['projectId' => $projectId]);
 	
